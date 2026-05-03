@@ -70,8 +70,8 @@ export default function App() {
       <section id="hero" className="relative h-screen flex items-center justify-center">
         <div className="absolute inset-0 overflow-hidden">
           <img 
-            src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&q=80" 
-            alt="Scenic view of a lake and hills" 
+            src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-OypTLwVOBPeRKEhu2G4CsPzrK7gcwK.png" 
+            alt="Tomato and Basil Farm Cafe exterior at night" 
             className="w-full h-full object-cover scale-105 animate-[slowPan_20s_ease-in-out_infinite_alternate]"
           />
           <div className="absolute inset-0 bg-black/40"></div>
@@ -113,8 +113,8 @@ export default function App() {
           <FadeIn className="order-2 md:order-1 flex justify-center">
             <div className="relative w-full max-w-md aspect-[3/4]">
               <img 
-                src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&q=80" 
-                alt="Cozy cafe interior" 
+                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-LhpxHzPwqU892eVO0QM9PrGz9UvRKy.png" 
+                alt="Delicious cafe dishes and fresh basil salad" 
                 className="w-full h-full object-cover rounded-[32px] shadow-2xl"
               />
               <div className="absolute -bottom-8 -right-8 w-48 h-48 bg-olive rounded-full flex items-center justify-center p-8 text-white font-serif text-center text-sm italic shadow-lg hidden md:flex rotate-12">
@@ -161,17 +161,17 @@ export default function App() {
               {
                 title: "Morning Favorites",
                 desc: "Freshly baked morning pastries, artisanal sourdough toasts, and hearty farm breakfast skillets featuring local free-range eggs.",
-                image: "https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&q=80"
+                image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image.png-PEBWwx71ndwaNakNU9MFYMBXlHVgsm.jpeg"
               },
               {
                 title: "Wood-Fired Classics",
                 desc: "Handcrafted pastas tossed in slow-roasted tomato sauce, rustic pizzas with fresh garden basil, and hearty comforting stews.",
-                image: "https://images.unsplash.com/photo-1473093295043-cdd812d0e601?auto=format&fit=crop&q=80"
+                image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-XYiajOfXBfCJKaCvYHDnXnrA4tTyrl.png"
               },
               {
                 title: "Farm-Fresh Refreshments",
                 desc: "Locally sourced artisanal coffees, vibrant garden herb lemonades, and soothing floral teas blended in-house.",
-                image: "https://images.unsplash.com/photo-1497935586351-b67a49e012bf?auto=format&fit=crop&q=80"
+                image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-FBO2fUeD7nZlOUwiEhbZ6CdaT1SlMi.png"
               }
             ].map((item, idx) => (
               <FadeIn key={idx} delay={idx * 0.2} className="group">
@@ -212,16 +212,16 @@ export default function App() {
 
           <div className="grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-6 auto-rows-[250px] md:auto-rows-[300px]">
             <FadeIn delay={0.1} className="md:col-span-8 row-span-1 rounded-[24px] overflow-hidden group">
-              <img src="https://images.unsplash.com/photo-1511447333015-45b65e60f6d5?auto=format&fit=crop&q=80" alt="Lake view from cafe" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+              <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-ndRUEjcdFcSA73QSvCuWJeFEy1uLN2.png" alt="Margarita pizza with fresh basil" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
             </FadeIn>
             <FadeIn delay={0.2} className="md:col-span-4 row-span-2 rounded-[24px] overflow-hidden group">
-              <img src="https://images.unsplash.com/photo-1464305795204-6f5bbfc7fb81?auto=format&fit=crop&q=80" alt="Cafe exterior" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+              <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-M4VjeBIXbM09b8KLK6LY4nAuzmoQdU.png" alt="Grilled steak with roasted vegetables" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
             </FadeIn>
             <FadeIn delay={0.3} className="md:col-span-4 row-span-1 rounded-[24px] overflow-hidden group">
-              <img src="https://images.unsplash.com/photo-1525610553991-56e11115b862?auto=format&fit=crop&q=80" alt="Fresh tomatoes" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+              <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-e6qfnCOuyipCmlWEUYjrKYuSjalLnu.jpeg" alt="Wood-fired Margherita pizza" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
             </FadeIn>
             <FadeIn delay={0.4} className="md:col-span-4 row-span-1 rounded-[24px] overflow-hidden group">
-              <img src="https://images.unsplash.com/photo-1512568400610-62da28bc8a13?auto=format&fit=crop&q=80" alt="Coffee pouring" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+              <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-FBO2fUeD7nZlOUwiEhbZ6CdaT1SlMi.png" alt="Elegant pasta with fresh herbs" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
             </FadeIn>
           </div>
         </div>
@@ -230,7 +230,7 @@ export default function App() {
       {/* Footer & Reserve Area */}
       <footer id="contact" className="bg-ink text-warm-white relative">
         <div className="absolute inset-0 overflow-hidden pointer-events-none opacity-5">
-           <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&q=80" alt="texture" className="w-full h-full object-cover mix-blend-overlay grayscale" />
+           <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-LhpxHzPwqU892eVO0QM9PrGz9UvRKy.png" alt="texture" className="w-full h-full object-cover mix-blend-overlay grayscale" />
         </div>
         
         <div className="max-w-7xl mx-auto px-6 py-24 md:py-32 relative z-10 grid md:grid-cols-2 gap-16">
