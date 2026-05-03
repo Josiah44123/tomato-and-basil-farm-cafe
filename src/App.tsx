@@ -144,41 +144,82 @@ export default function App() {
       </section>
 
       {/* Menu Highlights */}
-      <section id="menu" className="py-24 md:py-32 bg-warm-white">
-        <div className="max-w-7xl mx-auto px-6">
-          <FadeIn className="text-center mb-20">
-            <div className="text-sm font-bold tracking-[0.2em] uppercase text-terracotta mb-4">Farm to Table</div>
-            <h2 className="font-serif text-5xl md:text-6xl text-ink">Menu Highlights</h2>
-            <div className="w-24 h-px bg-olive/30 mx-auto mt-8"></div>
+      <section className="py-24 md:py-32 px-6 bg-warm-white relative">
+        <div className="max-w-7xl mx-auto">
+          <FadeIn className="mb-16">
+            <h2 className="font-serif text-5xl md:text-6xl leading-tight text-ink mb-6">
+              Menu <span className="italic text-terracotta">Highlights</span>
+            </h2>
+            <p className="text-xl text-ink/70 font-light leading-relaxed max-w-2xl">
+              Every dish starts with intention. Sourced from our farm and prepared with the patience that only passion brings.
+            </p>
           </FadeIn>
 
-          <div className="grid md:grid-cols-3 gap-12">
-            {[
-              {
-                title: "Morning Favorites",
-                desc: "Freshly baked morning pastries, artisanal sourdough toasts, and hearty farm breakfast skillets featuring local free-range eggs.",
-                image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image.png-PEBWwx71ndwaNakNU9MFYMBXlHVgsm.jpeg"
-              },
-              {
-                title: "Wood-Fired Classics",
-                desc: "Handcrafted pastas tossed in slow-roasted tomato sauce, rustic pizzas with fresh garden basil, and hearty comforting stews.",
-                image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-XYiajOfXBfCJKaCvYHDnXnrA4tTyrl.png"
-              },
-              {
-                title: "Farm-Fresh Refreshments",
-                desc: "Locally sourced artisanal coffees, vibrant garden herb lemonades, and soothing floral teas blended in-house.",
-                image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-FBO2fUeD7nZlOUwiEhbZ6CdaT1SlMi.png"
-              }
-            ].map((item, idx) => (
-              <FadeIn key={idx} delay={idx * 0.2} className="group">
-                <div className="relative aspect-[4/5] rounded-[24px] overflow-hidden mb-8">
-                  <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors z-10 duration-500"></div>
-                  <img src={item.image} alt={item.title} className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700" />
-                </div>
-                <h3 className="font-serif text-2xl font-medium mb-3 group-hover:text-terracotta transition-colors">{item.title}</h3>
-                <p className="font-light text-ink/70 leading-relaxed">{item.desc}</p>
+          <div className="grid md:grid-cols-12 gap-12 items-start">
+            {/* Left descriptions */}
+            <div className="md:col-span-3 space-y-12">
+              <FadeIn delay={0.1}>
+                <h3 className="font-serif text-2xl text-ink mb-3">Morning Favorites</h3>
+                <p className="font-light text-ink/70 leading-relaxed text-sm">
+                  Freshly baked pastries, artisanal sourdough toasts, and hearty farm breakfast skillets featuring local free-range eggs.
+                </p>
               </FadeIn>
-            ))}
+              <FadeIn delay={0.2}>
+                <h3 className="font-serif text-2xl text-ink mb-3">Wood-Fired Classics</h3>
+                <p className="font-light text-ink/70 leading-relaxed text-sm">
+                  Handcrafted pastas, rustic pizzas with fresh garden basil, and hearty comforting stews from our wood-fired ovens.
+                </p>
+              </FadeIn>
+              <FadeIn delay={0.3}>
+                <h3 className="font-serif text-2xl text-ink mb-3">Farm-Fresh Refreshments</h3>
+                <p className="font-light text-ink/70 leading-relaxed text-sm">
+                  Locally sourced artisanal coffees, vibrant garden herb lemonades, and soothing floral teas blended in-house.
+                </p>
+              </FadeIn>
+            </div>
+
+            {/* Center gallery */}
+            <div className="md:col-span-6">
+              <div className="grid grid-cols-2 gap-4 md:gap-6 auto-rows-[280px]">
+                <FadeIn delay={0.1} className="rounded-[20px] overflow-hidden group col-span-2">
+                  <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-rkS0vAYKg7s7U0DyV2HEIn0SLGVL1k.png" alt="Wood-fired Margherita pizza with Taal Lake view" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+                </FadeIn>
+                <FadeIn delay={0.2} className="rounded-[20px] overflow-hidden group">
+                  <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-OOyqvcjh5hqivFbtPKdrLV3eCGC7zR.png" alt="Berry pancake with whipped cream" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+                </FadeIn>
+                <FadeIn delay={0.3} className="rounded-[20px] overflow-hidden group">
+                  <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image.png-RPI2NL9BHmCX9r7CtXOyRDAbmLLpNW.jpeg" alt="Fresh tomato and basil salad with bread" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+                </FadeIn>
+                <FadeIn delay={0.4} className="rounded-[20px] overflow-hidden group">
+                  <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-5kFWjRctIen0TBqpHTORm863SkaiPj.png" alt="Pasta with meatballs and basil" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+                </FadeIn>
+                <FadeIn delay={0.5} className="rounded-[20px] overflow-hidden group col-span-2">
+                  <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-CqLSP0GubWsGckwhyHZAczJJVVhdaL.png" alt="Braised meat stew with rice" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+                </FadeIn>
+              </div>
+            </div>
+
+            {/* Right descriptions */}
+            <div className="md:col-span-3 space-y-12">
+              <FadeIn delay={0.1}>
+                <h3 className="font-serif text-2xl text-ink mb-3">Seasonal Selections</h3>
+                <p className="font-light text-ink/70 leading-relaxed text-sm">
+                  Dishes that change with the seasons, showcasing what our garden yields at its peak freshness and flavor.
+                </p>
+              </FadeIn>
+              <FadeIn delay={0.2}>
+                <h3 className="font-serif text-2xl text-ink mb-3">Garden-Inspired</h3>
+                <p className="font-light text-ink/70 leading-relaxed text-sm">
+                  Fresh salads bursting with just-harvested tomatoes, basil, and seasonal greens prepared in simple, authentic ways.
+                </p>
+              </FadeIn>
+              <FadeIn delay={0.3}>
+                <h3 className="font-serif text-2xl text-ink mb-3">Sweet Endings</h3>
+                <p className="font-light text-ink/70 leading-relaxed text-sm">
+                  Artisanal desserts that balance indulgence with freshness—berry tarts, herb-infused treats, and homemade treasures.
+                </p>
+              </FadeIn>
+            </div>
           </div>
 
           <FadeIn delay={0.6} className="text-center mt-16">
