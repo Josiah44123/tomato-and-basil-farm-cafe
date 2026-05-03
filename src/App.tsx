@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { motion } from 'motion/react';
 import { MapPin, Clock, Instagram, Facebook, Mail, Menu, X, ArrowRight } from 'lucide-react';
+import { InteractiveGallery } from './components/InteractiveGallery';
 
 const FadeIn = ({ children, delay = 0, className = "" }: { children: React.ReactNode, delay?: number, className?: string }) => (
   <motion.div
@@ -143,126 +144,8 @@ export default function App() {
         </div>
       </section>
 
-      {/* Menu Highlights */}
-      <section className="py-20 md:py-28 px-6 bg-warm-white relative">
-        <div className="max-w-7xl mx-auto">
-          <FadeIn className="mb-12">
-            <h2 className="font-serif text-5xl md:text-6xl leading-tight text-ink mb-4">
-              Menu <span className="italic text-terracotta">Highlights</span>
-            </h2>
-            <p className="text-base md:text-lg text-ink/70 font-light leading-relaxed max-w-2xl">
-              Every dish starts with intention. Sourced from our farm and prepared with the patience that only passion brings.
-            </p>
-          </FadeIn>
-
-          <div className="grid md:grid-cols-12 gap-10 items-start">
-            {/* Left descriptions */}
-            <div className="md:col-span-3 space-y-10">
-              <FadeIn delay={0.1}>
-                <h3 className="font-serif text-xl text-ink mb-2">Morning Favorites</h3>
-                <p className="font-light text-ink/70 leading-snug text-sm">
-                  Freshly baked pastries, artisanal sourdough, and hearty breakfast skillets with local free-range eggs.
-                </p>
-              </FadeIn>
-              <FadeIn delay={0.2}>
-                <h3 className="font-serif text-xl text-ink mb-2">Wood-Fired Classics</h3>
-                <p className="font-light text-ink/70 leading-snug text-sm">
-                  Handcrafted pastas, rustic pizzas with fresh garden basil, and hearty stews from our ovens.
-                </p>
-              </FadeIn>
-              <FadeIn delay={0.3}>
-                <h3 className="font-serif text-xl text-ink mb-2">Farm-Fresh Refreshments</h3>
-                <p className="font-light text-ink/70 leading-snug text-sm">
-                  Artisanal coffees, vibrant garden herb lemonades, and soothing floral teas blended in-house.
-                </p>
-              </FadeIn>
-            </div>
-
-            {/* Center gallery */}
-            <div className="md:col-span-6">
-              <div className="grid grid-cols-2 gap-4 md:gap-6 auto-rows-[280px]">
-                <FadeIn delay={0.1} className="rounded-[20px] overflow-hidden group col-span-2">
-                  <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-rkS0vAYKg7s7U0DyV2HEIn0SLGVL1k.png" alt="Wood-fired Margherita pizza with Taal Lake view" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
-                </FadeIn>
-                <FadeIn delay={0.2} className="rounded-[20px] overflow-hidden group">
-                  <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-OOyqvcjh5hqivFbtPKdrLV3eCGC7zR.png" alt="Berry pancake with whipped cream" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
-                </FadeIn>
-                <FadeIn delay={0.3} className="rounded-[20px] overflow-hidden group">
-                  <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-LhpxHzPwqU892eVO0QM9PrGz9UvRKy.png" alt="Fried chicken, pasta, and fresh basil salad spread" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
-                </FadeIn>
-                <FadeIn delay={0.4} className="rounded-[20px] overflow-hidden group">
-                  <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-5kFWjRctIen0TBqpHTORm863SkaiPj.png" alt="Pasta with meatballs and basil" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
-                </FadeIn>
-                <FadeIn delay={0.5} className="rounded-[20px] overflow-hidden group col-span-2">
-                  <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-CqLSP0GubWsGckwhyHZAczJJVVhdaL.png" alt="Braised meat stew with rice" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
-                </FadeIn>
-              </div>
-            </div>
-
-            {/* Right descriptions */}
-            <div className="md:col-span-3 space-y-10">
-              <FadeIn delay={0.1}>
-                <h3 className="font-serif text-xl text-ink mb-2">Seasonal Selections</h3>
-                <p className="font-light text-ink/70 leading-snug text-sm">
-                  Dishes that change with the seasons, showcasing what our garden yields at peak freshness.
-                </p>
-              </FadeIn>
-              <FadeIn delay={0.2}>
-                <h3 className="font-serif text-xl text-ink mb-2">Garden-Inspired</h3>
-                <p className="font-light text-ink/70 leading-snug text-sm">
-                  Fresh salads with just-harvested tomatoes, basil, and seasonal greens prepared simply and authentically.
-                </p>
-              </FadeIn>
-              <FadeIn delay={0.3}>
-                <h3 className="font-serif text-xl text-ink mb-2">Sweet Endings</h3>
-                <p className="font-light text-ink/70 leading-snug text-sm">
-                  Artisanal desserts balancing indulgence with freshness—berry tarts and homemade treasures.
-                </p>
-              </FadeIn>
-            </div>
-          </div>
-
-          <FadeIn delay={0.6} className="text-center mt-16">
-            <button className="px-8 py-3 border border-ink text-ink rounded-full uppercase text-sm tracking-widest font-medium hover:bg-ink hover:text-white transition-colors">
-              View Full Menu
-            </button>
-          </FadeIn>
-        </div>
-      </section>
-
-      {/* Gallery Highlights */}
-      <section id="experience" className="py-24 md:py-32 bg-warm-bg overflow-hidden relative">
-        {/* Decorative background element */}
-        <div className="absolute top-0 right-0 w-1/3 h-1/2 bg-olive/5 rounded-bl-[100px] pointer-events-none"></div>
-        
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
-            <FadeIn>
-              <h2 className="font-serif text-5xl md:text-6xl text-ink leading-tight">
-                Gallery <span className="italic text-olive">Highlights</span>
-              </h2>
-            </FadeIn>
-            <FadeIn delay={0.2} className="max-w-md text-ink/70 font-light text-lg">
-              Al fresco dining amidst lush gardens, cozy cottage lighting, and panoramic overlooks. Breathe in the mountain air.
-            </FadeIn>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-6 auto-rows-[250px] md:auto-rows-[300px]">
-            <FadeIn delay={0.1} className="md:col-span-8 row-span-1 rounded-[24px] overflow-hidden group">
-              <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-ndRUEjcdFcSA73QSvCuWJeFEy1uLN2.png" alt="Margarita pizza with fresh basil" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
-            </FadeIn>
-            <FadeIn delay={0.2} className="md:col-span-4 row-span-2 rounded-[24px] overflow-hidden group">
-              <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-M4VjeBIXbM09b8KLK6LY4nAuzmoQdU.png" alt="Grilled steak with roasted vegetables" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
-            </FadeIn>
-            <FadeIn delay={0.3} className="md:col-span-4 row-span-1 rounded-[24px] overflow-hidden group">
-              <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-e6qfnCOuyipCmlWEUYjrKYuSjalLnu.jpeg" alt="Wood-fired Margherita pizza" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
-            </FadeIn>
-            <FadeIn delay={0.4} className="md:col-span-4 row-span-1 rounded-[24px] overflow-hidden group">
-              <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-FBO2fUeD7nZlOUwiEhbZ6CdaT1SlMi.png" alt="Elegant pasta with fresh herbs" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
-            </FadeIn>
-          </div>
-        </div>
-      </section>
+      {/* Interactive Gallery - Menu & Gallery Combined */}
+      <InteractiveGallery />
 
       {/* Footer & Reserve Area */}
       <footer id="contact" className="bg-ink text-warm-white relative">
