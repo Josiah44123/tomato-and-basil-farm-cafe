@@ -109,41 +109,39 @@ export default function App() {
 
       {/* About Us */}
       <section id="about" className="py-24 md:py-32 px-6 bg-warm-bg relative">
-        <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
-          <FadeIn className="order-2 md:order-1 flex justify-center">
-            <div className="relative w-full max-w-md aspect-[3/4]">
-              <img 
-                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-LhpxHzPwqU892eVO0QM9PrGz9UvRKy.png" 
-                alt="Delicious cafe dishes and fresh basil salad" 
-                className="w-full h-full object-cover rounded-[32px] shadow-2xl"
-              />
-              <div className="absolute -bottom-8 -right-8 w-48 h-48 bg-olive rounded-full flex items-center justify-center p-8 text-white font-serif text-center text-sm italic shadow-lg hidden md:flex rotate-12">
-                "Where time slows down and flavors come alive."
-              </div>
-            </div>
+        <div className="max-w-7xl mx-auto">
+          <FadeIn>
+            <div className="text-sm font-bold tracking-[0.2em] uppercase text-olive mb-4">Our Story</div>
+            <h2 className="font-serif text-5xl md:text-6xl leading-tight text-ink mb-16">
+              A sanctuary of <br/><span className="italic font-light text-terracotta">taste & tranquility</span>
+            </h2>
           </FadeIn>
           
-          <div className="order-1 md:order-2 space-y-8">
-            <FadeIn>
-              <div className="text-sm font-bold tracking-[0.2em] uppercase text-olive mb-4">Our Story</div>
-              <h2 className="font-serif text-5xl md:text-6xl leading-tight text-ink">
-                A sanctuary of <br/><span className="italic font-light text-terracotta">taste & tranquility</span>
-              </h2>
-            </FadeIn>
-            <FadeIn delay={0.2} className="space-y-6 text-lg text-ink/80 leading-relaxed font-light">
+          <div className="grid md:grid-cols-2 gap-16 items-center">
+            <FadeIn className="order-2 md:order-1 space-y-6 text-lg text-ink/80 leading-relaxed font-light">
               <p>
                 Nestled overlooking the breathtaking majesty of Taal Lake, Tomato and Basil began as a simple dream: to share the comforting embrace of farm-fresh food in a setting that feels like a gentle escape.
               </p>
               <p>
                 Every dish honors the earth it came from. From the sun-ripened tomatoes harvested nearby to the aromatic basil that lines our garden paths, we believe in honest ingredients cooked with patience and love. Here, weekend getaways turn into lasting memories over wood-fired warmth and a perfect cup of coffee.
               </p>
+              <FadeIn delay={0.2}>
+                <button onClick={() => scrollToSection('experience')} className="text-olive font-semibold tracking-wide uppercase text-sm border-b-2 border-olive pb-1 hover:text-olive-dark hover:border-olive-dark transition-colors inline-flex items-center gap-2">
+                  Discover the ambiance <ArrowRight size={16} />
+                </button>
+              </FadeIn>
             </FadeIn>
-            <FadeIn delay={0.4}>
-              <button onClick={() => scrollToSection('experience')} className="text-olive font-semibold tracking-wide uppercase text-sm border-b-2 border-olive pb-1 hover:text-olive-dark hover:border-olive-dark transition-colors inline-flex items-center gap-2">
-                Discover the ambiance <ArrowRight size={16} />
-              </button>
+            
+            <FadeIn className="order-1 md:order-2 flex justify-center">
+              <img 
+                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-LhpxHzPwqU892eVO0QM9PrGz9UvRKy.png" 
+                alt="Delicious cafe dishes and fresh basil salad" 
+                className="w-full max-w-md aspect-[3/4] object-cover rounded-[32px] shadow-2xl"
+              />
             </FadeIn>
           </div>
+        </div>
+
         </div>
       </section>
 
@@ -193,7 +191,7 @@ export default function App() {
         </div>
       </section>
 
-      {/* The Experience Gallery */}
+      {/* Gallery Highlights */}
       <section id="experience" className="py-24 md:py-32 bg-warm-bg overflow-hidden relative">
         {/* Decorative background element */}
         <div className="absolute top-0 right-0 w-1/3 h-1/2 bg-olive/5 rounded-bl-[100px] pointer-events-none"></div>
@@ -202,7 +200,7 @@ export default function App() {
           <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
             <FadeIn>
               <h2 className="font-serif text-5xl md:text-6xl text-ink leading-tight">
-                The <span className="italic text-olive">Experience</span>
+                Gallery <span className="italic text-olive">Highlights</span>
               </h2>
             </FadeIn>
             <FadeIn delay={0.2} className="max-w-md text-ink/70 font-light text-lg">
@@ -257,13 +255,18 @@ export default function App() {
               </div>
             </div>
 
-            <div className="flex gap-6">
-              <a href="#" className="w-12 h-12 rounded-full border border-warm-white/20 flex items-center justify-center hover:bg-olive hover:border-olive transition-colors">
-                <Instagram size={20} />
-              </a>
-              <a href="#" className="w-12 h-12 rounded-full border border-warm-white/20 flex items-center justify-center hover:bg-olive hover:border-olive transition-colors">
-                <Facebook size={20} />
-              </a>
+            <div className="space-y-3">
+              <p className="text-xs font-bold tracking-widest uppercase text-warm-white/60 mb-4">Follow Us</p>
+              <div className="flex gap-4">
+                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="group px-6 py-3 rounded-full border-2 border-terracotta bg-terracotta hover:bg-transparent text-white hover:text-terracotta font-semibold tracking-wide text-sm uppercase transition-all flex items-center gap-2">
+                  <Instagram size={18} />
+                  Instagram
+                </a>
+                <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="group px-6 py-3 rounded-full border-2 border-olive bg-olive hover:bg-transparent text-white hover:text-olive font-semibold tracking-wide text-sm uppercase transition-all flex items-center gap-2">
+                  <Facebook size={18} />
+                  Facebook
+                </a>
+              </div>
             </div>
           </div>
 
@@ -306,6 +309,27 @@ export default function App() {
           </div>
         </div>
         
+        <div className="border-t border-warm-white/10 py-16 px-6">
+          <div className="max-w-7xl mx-auto">
+            <FadeIn className="mb-8">
+              <h3 className="font-serif text-3xl text-warm-white mb-2">Visit Us</h3>
+              <p className="text-warm-white/70">Find us nestled in the hills of Mataasnakahoy overlooking Taal Lake</p>
+            </FadeIn>
+            <div className="rounded-[24px] overflow-hidden shadow-lg h-96 md:h-[500px]">
+              <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3871.9754316584766!2d121.08523!3d14.1214!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33bd91d4d5d5d5d5%3A0x5d5d5d5d5d5d5d5d!2sMataasnakahoy%2C%20Batangas!5e0!3m2!1sen!2sph!4v1234567890" 
+                width="100%" 
+                height="100%" 
+                style={{ border: 0 }} 
+                allowFullScreen="" 
+                loading="lazy" 
+                referrerPolicy="no-referrer-when-downgrade"
+                className="w-full h-full"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+
         <div className="border-t border-warm-white/10 text-center py-6 text-sm text-warm-white/40 tracking-wider">
            © {new Date().getFullYear()} Tomato & Basil Farm Cafe. All rights reserved.
         </div>
