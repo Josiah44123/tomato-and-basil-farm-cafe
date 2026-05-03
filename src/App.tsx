@@ -108,17 +108,17 @@ export default function App() {
       </section>
 
       {/* About Us */}
-      <section id="about" className="py-24 md:py-32 px-6 bg-warm-bg relative">
+      <section id="about" className="py-20 md:py-28 px-6 bg-warm-bg relative">
         <div className="max-w-7xl mx-auto">
           <FadeIn>
-            <div className="text-sm font-bold tracking-[0.2em] uppercase text-olive mb-4">Our Story</div>
-            <h2 className="font-serif text-5xl md:text-6xl leading-tight text-ink mb-16">
+            <div className="text-sm font-bold tracking-[0.2em] uppercase text-olive mb-3">Our Story</div>
+            <h2 className="font-serif text-5xl md:text-6xl leading-tight text-ink mb-12">
               A sanctuary of <br/><span className="italic font-light text-terracotta">taste & tranquility</span>
             </h2>
           </FadeIn>
           
-          <div className="grid md:grid-cols-2 gap-16 items-center">
-            <FadeIn className="order-2 md:order-1 space-y-6 text-lg text-ink/80 leading-relaxed font-light">
+          <div className="grid md:grid-cols-2 gap-12 md:gap-14 items-center">
+            <FadeIn className="order-2 md:order-1 space-y-5 text-base md:text-lg text-ink/80 leading-relaxed font-light">
               <p>
                 Nestled overlooking the breathtaking majesty of Taal Lake, Tomato and Basil began as a simple dream: to share the comforting embrace of farm-fresh food in a setting that feels like a gentle escape.
               </p>
@@ -126,7 +126,7 @@ export default function App() {
                 Every dish honors the earth it came from. From the sun-ripened tomatoes harvested nearby to the aromatic basil that lines our garden paths, we believe in honest ingredients cooked with patience and love. Here, weekend getaways turn into lasting memories over wood-fired warmth and a perfect cup of coffee.
               </p>
               <FadeIn delay={0.2}>
-                <button onClick={() => scrollToSection('experience')} className="text-olive font-semibold tracking-wide uppercase text-sm border-b-2 border-olive pb-1 hover:text-olive-dark hover:border-olive-dark transition-colors inline-flex items-center gap-2">
+                <button onClick={() => scrollToSection('experience')} className="text-olive font-semibold tracking-wide uppercase text-sm border-b-2 border-olive pb-1 hover:text-olive-dark hover:border-olive-dark transition-colors inline-flex items-center gap-2 mt-2">
                   Discover the ambiance <ArrowRight size={16} />
                 </button>
               </FadeIn>
@@ -134,9 +134,9 @@ export default function App() {
             
             <FadeIn className="order-1 md:order-2 flex justify-center">
               <img 
-                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-LhpxHzPwqU892eVO0QM9PrGz9UvRKy.png" 
-                alt="Delicious cafe dishes and fresh basil salad" 
-                className="w-full max-w-md aspect-[3/4] object-cover rounded-[32px] shadow-2xl"
+                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image.png-1ysG1HNVas32NUSDsRSrdhL2OWIOMc.jpeg" 
+                alt="Pasta carbonara, pizza margherita, and fried chicken with flowers" 
+                className="w-full max-w-md object-cover rounded-[24px] shadow-2xl"
               />
             </FadeIn>
           </div>
@@ -144,36 +144,36 @@ export default function App() {
       </section>
 
       {/* Menu Highlights */}
-      <section className="py-24 md:py-32 px-6 bg-warm-white relative">
+      <section className="py-20 md:py-28 px-6 bg-warm-white relative">
         <div className="max-w-7xl mx-auto">
-          <FadeIn className="mb-16">
-            <h2 className="font-serif text-5xl md:text-6xl leading-tight text-ink mb-6">
+          <FadeIn className="mb-12">
+            <h2 className="font-serif text-5xl md:text-6xl leading-tight text-ink mb-4">
               Menu <span className="italic text-terracotta">Highlights</span>
             </h2>
-            <p className="text-xl text-ink/70 font-light leading-relaxed max-w-2xl">
+            <p className="text-base md:text-lg text-ink/70 font-light leading-relaxed max-w-2xl">
               Every dish starts with intention. Sourced from our farm and prepared with the patience that only passion brings.
             </p>
           </FadeIn>
 
-          <div className="grid md:grid-cols-12 gap-12 items-start">
+          <div className="grid md:grid-cols-12 gap-10 items-start">
             {/* Left descriptions */}
-            <div className="md:col-span-3 space-y-12">
+            <div className="md:col-span-3 space-y-10">
               <FadeIn delay={0.1}>
-                <h3 className="font-serif text-2xl text-ink mb-3">Morning Favorites</h3>
-                <p className="font-light text-ink/70 leading-relaxed text-sm">
-                  Freshly baked pastries, artisanal sourdough toasts, and hearty farm breakfast skillets featuring local free-range eggs.
+                <h3 className="font-serif text-xl text-ink mb-2">Morning Favorites</h3>
+                <p className="font-light text-ink/70 leading-snug text-sm">
+                  Freshly baked pastries, artisanal sourdough, and hearty breakfast skillets with local free-range eggs.
                 </p>
               </FadeIn>
               <FadeIn delay={0.2}>
-                <h3 className="font-serif text-2xl text-ink mb-3">Wood-Fired Classics</h3>
-                <p className="font-light text-ink/70 leading-relaxed text-sm">
-                  Handcrafted pastas, rustic pizzas with fresh garden basil, and hearty comforting stews from our wood-fired ovens.
+                <h3 className="font-serif text-xl text-ink mb-2">Wood-Fired Classics</h3>
+                <p className="font-light text-ink/70 leading-snug text-sm">
+                  Handcrafted pastas, rustic pizzas with fresh garden basil, and hearty stews from our ovens.
                 </p>
               </FadeIn>
               <FadeIn delay={0.3}>
-                <h3 className="font-serif text-2xl text-ink mb-3">Farm-Fresh Refreshments</h3>
-                <p className="font-light text-ink/70 leading-relaxed text-sm">
-                  Locally sourced artisanal coffees, vibrant garden herb lemonades, and soothing floral teas blended in-house.
+                <h3 className="font-serif text-xl text-ink mb-2">Farm-Fresh Refreshments</h3>
+                <p className="font-light text-ink/70 leading-snug text-sm">
+                  Artisanal coffees, vibrant garden herb lemonades, and soothing floral teas blended in-house.
                 </p>
               </FadeIn>
             </div>
@@ -188,7 +188,7 @@ export default function App() {
                   <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-OOyqvcjh5hqivFbtPKdrLV3eCGC7zR.png" alt="Berry pancake with whipped cream" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
                 </FadeIn>
                 <FadeIn delay={0.3} className="rounded-[20px] overflow-hidden group">
-                  <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image.png-RPI2NL9BHmCX9r7CtXOyRDAbmLLpNW.jpeg" alt="Fresh tomato and basil salad with bread" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+                  <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-LhpxHzPwqU892eVO0QM9PrGz9UvRKy.png" alt="Fried chicken, pasta, and fresh basil salad spread" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
                 </FadeIn>
                 <FadeIn delay={0.4} className="rounded-[20px] overflow-hidden group">
                   <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-5kFWjRctIen0TBqpHTORm863SkaiPj.png" alt="Pasta with meatballs and basil" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
@@ -200,23 +200,23 @@ export default function App() {
             </div>
 
             {/* Right descriptions */}
-            <div className="md:col-span-3 space-y-12">
+            <div className="md:col-span-3 space-y-10">
               <FadeIn delay={0.1}>
-                <h3 className="font-serif text-2xl text-ink mb-3">Seasonal Selections</h3>
-                <p className="font-light text-ink/70 leading-relaxed text-sm">
-                  Dishes that change with the seasons, showcasing what our garden yields at its peak freshness and flavor.
+                <h3 className="font-serif text-xl text-ink mb-2">Seasonal Selections</h3>
+                <p className="font-light text-ink/70 leading-snug text-sm">
+                  Dishes that change with the seasons, showcasing what our garden yields at peak freshness.
                 </p>
               </FadeIn>
               <FadeIn delay={0.2}>
-                <h3 className="font-serif text-2xl text-ink mb-3">Garden-Inspired</h3>
-                <p className="font-light text-ink/70 leading-relaxed text-sm">
-                  Fresh salads bursting with just-harvested tomatoes, basil, and seasonal greens prepared in simple, authentic ways.
+                <h3 className="font-serif text-xl text-ink mb-2">Garden-Inspired</h3>
+                <p className="font-light text-ink/70 leading-snug text-sm">
+                  Fresh salads with just-harvested tomatoes, basil, and seasonal greens prepared simply and authentically.
                 </p>
               </FadeIn>
               <FadeIn delay={0.3}>
-                <h3 className="font-serif text-2xl text-ink mb-3">Sweet Endings</h3>
-                <p className="font-light text-ink/70 leading-relaxed text-sm">
-                  Artisanal desserts that balance indulgence with freshness—berry tarts, herb-infused treats, and homemade treasures.
+                <h3 className="font-serif text-xl text-ink mb-2">Sweet Endings</h3>
+                <p className="font-light text-ink/70 leading-snug text-sm">
+                  Artisanal desserts balancing indulgence with freshness—berry tarts and homemade treasures.
                 </p>
               </FadeIn>
             </div>
