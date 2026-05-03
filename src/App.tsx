@@ -141,8 +141,6 @@ export default function App() {
             </FadeIn>
           </div>
         </div>
-
-        </div>
       </section>
 
       {/* Menu Highlights */}
